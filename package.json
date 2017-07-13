@@ -8,7 +8,7 @@
     "start": "node index.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "Beerware", 
   "dependencies": {
     "express": "^4.15.3"
   }
