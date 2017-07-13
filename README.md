@@ -29,7 +29,7 @@ host:3000/jwt=<your jwt token here>
 localhost:3000/jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
 ```
 returns
-```
+``` javascript
 [{"alg":"HS256","typ":"JWT"},{"sub":"1234567890","name":"John Doe","admin":true}]
 ```
 ### For Alternative Setup
