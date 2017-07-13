@@ -77,6 +77,7 @@ function getClaims(currentString){
         }catch(err){
         }
     }
+    return strToReturn;
 }
 //END COPYING HERE INTO DEVELOPER CONSOLE OR NODE
 // call decodeJwt (jwtString);
