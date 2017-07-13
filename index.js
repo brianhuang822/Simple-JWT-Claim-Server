@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-
+// START COPYING HERE INTO DEVELOPER CONSOLE OR NODE
 const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
 
 function InvalidCharacterError(message) {
@@ -65,10 +65,8 @@ function decodeJwt(str) {
         return atob(output);
     }
 }
-app.get('/', function (req, res, next) {
-    let currentString = req.query["jwt"];
-    if (req.query["jwt"].includes("Bearer ")){
-
+function getClaims(currentString){
+    if (currentString.includes("Bearer ")){
         currentString = currentString.substring("Bearer ".length,currentString.length)
     }
     let strToReturn = [];
@@ -79,7 +77,11 @@ app.get('/', function (req, res, next) {
         }catch(err){
         }
     }
-    res.send(strToReturn);
+}
+//END COPYING HERE INTO DEVELOPER CONSOLE OR NODE
+// call decodeJwt (jwtString);
+app.get('/', function (req, res, next) {
+    res.send(getClaims(req.query["jwt"]));
 
 });
 
